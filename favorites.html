@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Farm Favorites · Cherry Flats Farm</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Lora:ital,wght@0,500;0,600;0,700;1,500&family=Libre+Franklin:wght@400;500;600&family=Caveat:wght@500;700&display=swap">
+<style>
+/* Layout: the farmhouse "junk drawer" — a short note, a disclosure tag, then four shelves of things we actually use, each with a handwritten reason. */
+:root{
+  --cherry:#8B2A2A; --cherry-deep:#6E1F1F;
+  --flour:#F6F0E4; --linen:#EDE3D1; --kraft:#C8A27A;
+  --chalk-bg:#2B2B28; --chalk:#ECE7DA;
+  --pine:#4A5D43; --citrus:#D98A3A;
+  --ink:#2E2620; --ink-soft:#5E5248;
+  --f-chalk:"Fredericka the Great","Rockwell",Georgia,serif;
+  --f-head:"Lora",Georgia,"Times New Roman",serif;
+  --f-body:"Libre Franklin",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-hand:"Caveat","Bradley Hand","Segoe Print",cursive;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{margin:0;background:var(--flour);color:var(--ink);font-family:var(--f-body);font-size:1.0625rem;line-height:1.6}
+img{max-width:100%;display:block}
+h1,h2,h3{font-family:var(--f-head);text-wrap:balance;margin:0;line-height:1.15}
+p{margin:0}
+a{color:var(--cherry)}
+a:focus-visible{outline:3px solid var(--citrus);outline-offset:3px}
+.wrap{max-width:1140px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.eyebrow{font-family:var(--f-chalk);color:var(--cherry);font-size:1.15rem;letter-spacing:.04em;margin-bottom:10px}
+.mock{background:var(--chalk-bg);color:var(--chalk);font-size:.85rem;text-align:center;padding-block:8px}
+
+header{background:var(--flour);border-bottom:1px solid var(--linen)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
+.logo-word{font-family:var(--f-chalk);font-size:1.5rem;line-height:1;color:var(--cherry)}
+.back{font-weight:600;font-size:.95rem;text-decoration:none}
+
+.intro{padding-block:clamp(40px,6vw,72px) 28px}
+.intro-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(24px,5vw,56px);align-items:center}
+.intro h1{font-size:clamp(2.2rem,5vw,3.6rem);font-weight:600}
+.intro h1 em{color:var(--cherry)}
+.intro p.lede{color:var(--ink-soft);max-width:58ch;margin-top:16px;font-size:1.1rem}
+.disclose{margin-top:20px;display:inline-block;background:var(--linen);border-left:4px solid var(--kraft);padding:10px 14px;font-size:.9rem;color:var(--ink-soft);max-width:60ch}
+.legend{display:flex;flex-direction:column;gap:8px;margin-top:14px;font-size:.92rem;color:var(--ink-soft)}
+.legend .tag{display:inline-block;font-size:.7rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:2px;background:var(--pine);color:var(--chalk);margin-right:6px}
+.legend .tag.wish{background:var(--citrus);color:var(--chalk-bg)}
+.intro-photo{border-radius:6px;overflow:hidden;aspect-ratio:4/5;transform:rotate(1.5deg);box-shadow:0 14px 30px rgba(46,38,32,.18)}
+.intro-photo img{width:100%;height:100%;object-fit:cover}
+@media (max-width:760px){.intro-grid{grid-template-columns:1fr}.intro-photo{aspect-ratio:4/3;transform:none}}
+
+.jump{display:flex;gap:10px;flex-wrap:wrap;padding-block:8px 34px}
+.jump a{font-family:var(--f-chalk);text-decoration:none;color:var(--chalk);background:var(--chalk-bg);padding:8px 14px;border-radius:3px;font-size:1.05rem}
+.jump a:hover{background:var(--cherry)}
+
+.shelf{padding-block:34px;border-top:1px dashed var(--kraft)}
+.shelf-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:22px}
+.shelf-head h2{font-size:clamp(1.6rem,3vw,2.2rem)}
+.shelf-head p{color:var(--ink-soft);max-width:48ch}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+@media (max-width:900px){.cards{grid-template-columns:1fr 1fr}}
+@media (max-width:540px){.cards{grid-template-columns:1fr}}
+.card{background:#FBF7EE;border:1px solid rgba(46,38,32,.08);border-radius:6px;padding:14px 14px 18px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.card .ph{aspect-ratio:4/3;border-radius:4px;background:repeating-linear-gradient(135deg,rgba(255,255,255,.18) 0 10px,transparent 10px 20px),var(--linen);display:flex;align-items:center;justify-content:center;color:var(--ink-soft);font-size:.85rem;text-align:center;padding:12px}
+.card .tag{align-self:flex-start;font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:2px;background:var(--pine);color:var(--chalk)}
+.card .tag.wish{background:var(--citrus);color:var(--chalk-bg)}
+.card h3{font-size:1.15rem}
+.why{font-family:var(--f-hand);font-size:1.35rem;line-height:1.2;color:var(--ink)}
+.why.todo{color:var(--ink-soft);opacity:.75}
+.card .go{margin-top:auto;font-weight:600;font-size:.95rem;text-decoration:none}
+.card.feature{grid-column:span 2;display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:center}
+.card.feature .ph{aspect-ratio:4/3;height:100%}
+@media (max-width:900px){.card.feature{grid-column:span 2}}
+@media (max-width:540px){.card.feature{grid-column:span 1;grid-template-columns:1fr}}
+
+footer{background:var(--cherry-deep);color:#F1E4DA;padding-block:34px;margin-top:40px;font-size:.9rem}
+footer .wrap{display:flex;justify-content:space-between;gap:10px 24px;flex-wrap:wrap}
+footer a{color:#F1E4DA}
+</style>
+</head>
+<body>
+<div class="mock">Farm Favorites draft · Grey boxes and grey notes are waiting for your picks</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="index.html"><span class="logo-word">Cherry Flats Farm</span></a>
+    <a class="back" href="index.html">← Back to the farmhouse</a>
+  </div>
+</header>
+
+<main>
+  <section class="intro">
+    <div class="wrap intro-grid">
+      <div>
+        <p class="eyebrow">Farm Favorites</p>
+        <h1>The things that <em>earn their keep</em> around here.</h1>
+        <p class="lede">People ask what we use for milking, canning, baking and keeping two boys busy. These are the tools and treasures that have held up on a working farm. If it's on this page, it's in our barn, our kitchen, or on my wish list, and I'll always tell you which.</p>
+        <p class="disclose">A friendly note: some links on this page are affiliate links. If you buy through one, Cherry Flats Farm may earn a small commission at no extra cost to you.</p>
+        <div class="legend">
+          <span><span class="tag">We use this</span> Things we own, use on the farm, and would buy again.</span>
+          <span><span class="tag wish">On my wish list</span> Things I'd love to have but haven't used myself yet, so no promises on how they hold up.</span>
+        </div>
+      </div>
+      <div class="intro-photo"><img src="quiche-chalkboard.jpg" alt="Farm ingredients on the kitchen table beside a Home Grown chalkboard"></div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <nav class="jump" aria-label="Favorites sections">
+      <a href="#kitchen">In the Kitchen</a>
+      <a href="#barn">Garden &amp; Barn</a>
+      <a href="#rest">Rest &amp; Recover</a>
+      <a href="#kids">Kids &amp; Homeschool</a>
+    </nav>
+
+    <section class="shelf" id="kitchen">
+      <div class="shelf-head">
+        <h2>In the Kitchen</h2>
+        <p>Bread, canning, and feeding a crowd from what the farm gives us.</p>
+      </div>
+      <div class="cards">
+        <article class="card"><div class="ph">Photo of your pick</div><span class="tag">We use this</span><h3>Your mixer or bread pan</h3><p class="why todo">One line in your words: why you'd buy it again.</p><a class="go" href="#kitchen">See it →</a></article>
+        <article class="card"><div class="ph">Photo of your pick</div><span class="tag">We use this</span><h3>Your canning setup</h3><p class="why todo">One line in your words.</p><a class="go" href="#kitchen">See it →</a></article>
+        <article class="card"><div class="ph">Photo of your pick</div><span class="tag">We use this</span><h3>Your cast iron</h3><p class="why todo">One line in your words.</p><a class="go" href="#kitchen">See it →</a></article>
+      </div>
+    </section>
+
+    <section class="shelf" id="barn">
+      <div class="shelf-head">
+        <h2>Garden &amp; Barn</h2>
+        <p>Milking, chickens, garlic beds and chores in every kind of weather.</p>
+      </div>
+      <div class="cards">
+        <article class="card"><div class="ph">Photo of your pick</div><span class="tag">We use this</span><h3>Your milking pail or stand gear</h3><p class="why todo">One line in your words.</p><a class="go" href="#barn">See it →</a></article>
+        <article class="card"><div class="ph">Photo of your pick</div><span class="tag">We use this</span><h3>Your chicken waterer or feeder</h3><p class="why todo">One line in your words.</p><a class="go" href="#barn">See it →</a></article>
+        <article class="card"><div class="ph">Photo of your pick</div><span class="tag">We use this</span><h3>Your chore boots</h3><p class="why todo">One line in your words.</p><a class="go" href="#barn">See it →</a></article>
+      </div>
+    </section>
+
+    <section class="shelf" id="rest">
+      <div class="shelf-head">
+        <h2>Rest &amp; Recover</h2>
+        <p>Because the farm doesn't stop, and neither do we unless we plan for it.</p>
+      </div>
+      <div class="cards">
+        <article class="card feature"><div class="ph">Photo of the barrel sauna</div><div style="display:flex;flex-direction:column;gap:10px"><span class="tag wish">On my wish list</span><h3>Cedar barrel sauna</h3><p class="why todo">Your note: why you want one, or what it's like once it's here. Change the tag to "We use this" when it arrives.</p><a class="go" href="#rest">See it →</a></div></article>
+        <article class="card"><div class="ph">Photo of your pick</div><span class="tag">We use this</span><h3>Your favorite wind-down item</h3><p class="why todo">One line in your words.</p><a class="go" href="#rest">See it →</a></article>
+      </div>
+    </section>
+
+    <section class="shelf" id="kids">
+      <div class="shelf-head">
+        <h2>Kids &amp; Homeschool</h2>
+        <p>What actually gets used at our table and in the back seat.</p>
+      </div>
+      <div class="cards">
+        <article class="card"><div class="ph">Photo of your pick</div><span class="tag">We use this</span><h3>Your favorite art supplies</h3><p class="why todo">One line in your words.</p><a class="go" href="#kids">See it →</a></article>
+        <article class="card"><div class="ph">Photo of your pick</div><span class="tag">We use this</span><h3>Your road-trip must-have</h3><p class="why todo">One line in your words.</p><a class="go" href="#kids">See it →</a></article>
+        <article class="card"><div class="ph">Photo of your pick</div><span class="tag">We use this</span><h3>Your homeschool staple</h3><p class="why todo">One line in your words.</p><a class="go" href="#kids">See it →</a></article>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Cherry Flats Farm</span>
+    <span>Some links on this page are affiliate links. <a href="index.html">Back to the farmhouse</a></span>
+  </div>
+</footer>
+</body>
+</html>
