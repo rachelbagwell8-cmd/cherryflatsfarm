@@ -245,30 +245,13 @@
   <section class="band" id="gift">
     <div class="wrap">
       <div class="gift-box">
-        <div class="gift-art" aria-hidden="true">
-          <span class="gt">Holiday Road-Trip Scavenger Hunt</span>
-          <ul>
-            <li>A red barn</li>
-            <li>Cows lying down</li>
-            <li>A license plate from Oregon</li>
-            <li>Someone singing</li>
-            <li>A bridge over a river</li>
-            <li>A hawk on a fence post</li>
-          </ul>
-        </div>
+        <img class="gift-cover" src="scavenger-hunt-cover-preview.jpg" alt="Cover of the free Holiday Road-Trip Scavenger Hunt printable: a red truck with a wreath driving past a snowy red barn" width="1200" height="1553" loading="lazy">
         <div>
           <p class="eyebrow">A little something for the road</p>
           <h2>Free printable road-trip scavenger hunt</h2>
-          <p class="lede">Headed to Grandma's for the holidays? Print this before you leave, hand out the pencils, and win back an hour of quiet. We'll send it straight to your inbox, plus the occasional farm letter.</p>
-          <p class="preview-note" id="preview-note"><b>Preview only:</b> this sign-up isn't connected yet, so nothing typed here would be saved. It opens before launch.</p>
-          <!-- SIGNUP DESTINATION (not connected): Cherry Flats email list + automatic welcome email with the PDF. -->
-          <form class="gift-form" id="giftForm" novalidate aria-describedby="preview-note">
-            <label for="gift-name">First name</label>
-            <input id="gift-name" name="name" type="text" placeholder="First name" autocomplete="given-name" disabled>
-            <label for="gift-email">Email address</label>
-            <input id="gift-email" name="email" type="email" placeholder="Email address" autocomplete="email" disabled>
-            <button class="btn btn-red" type="submit" disabled>Sign-up opens soon</button>
-          </form>
+          <p class="lede">Headed to Grandma's for the holidays? Print this before you leave and hand out the crayons. Five pages of picture hunts, bingo and brain busters, with points and a family scoreboard, fun for little readers and big kids alike. We'll send it straight to your inbox, plus the occasional farm letter.</p>
+          <!-- Kit form "Road Trip Scavenger Hunt": signs people up and emails them the PDF. -->
+          <div class="kit-form"><script async data-uid="9f25c429f0" src="https://rachel-bagwell.kit.com/9f25c429f0/index.js"></script></div>
           <p class="fine">No spam, ever. Unsubscribe anytime.</p>
         </div>
       </div>
@@ -415,8 +398,6 @@ function renderStand(){
 }
 renderStand();
 
-// Sign-up is not connected yet: block submission so nobody is told they subscribed.
-document.getElementById("giftForm").addEventListener("submit", e => e.preventDefault());
 
 // Slim the sticky header once the visitor starts scrolling.
 const hdr = document.querySelector("header");

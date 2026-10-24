@@ -164,6 +164,12 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 
 /* gift */
 .gift-box{display:grid;grid-template-columns:auto 1fr;gap:clamp(24px,4vw,48px);align-items:center;border:2px solid var(--cherry);border-radius:8px;padding:clamp(24px,4vw,44px);background:#FBF7EE}
+.gift-cover{width:clamp(150px,20vw,230px);height:auto;border:2px solid var(--ink);border-radius:4px;transform:rotate(-3deg);box-shadow:8px 8px 0 var(--kraft);display:block}
+.kit-form{margin-top:18px}
+.kit-form .formkit-form{max-width:100%!important;border:0!important;background:transparent!important;font-family:inherit!important}
+.kit-form .formkit-form [data-style="clean"]{padding:0!important}
+.kit-form .formkit-input{font-family:inherit!important;border:2px solid var(--kraft)!important;background:var(--flour)!important;color:var(--ink)!important}
+.kit-form .formkit-submit{background:var(--cherry)!important;font-family:inherit!important}
 .gift-art{width:clamp(140px,18vw,200px);aspect-ratio:3/4;background:var(--flour);border:2px solid var(--ink);border-radius:4px;padding:14px;display:flex;flex-direction:column;gap:8px;transform:rotate(-4deg);box-shadow:8px 8px 0 var(--kraft)}
 .gift-art .gt{font-family:var(--f-chalk);font-size:1.05rem;color:var(--cherry);line-height:1.1}
 .gift-art ul{list-style:none;margin:0;padding:0;font-size:.72rem;display:flex;flex-direction:column;gap:5px}
@@ -175,7 +181,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .gift-form input{flex:1 1 220px;min-width:0;font:inherit;padding:12px 14px;border:2px solid var(--kraft);border-radius:4px;background:var(--flour);color:var(--ink)}
 .fine{font-size:.82rem;color:var(--ink-soft);margin-top:10px}
 .thanks{margin-top:16px;font-family:var(--f-hand);font-size:1.5rem;color:var(--pine)}
-@media (max-width:640px){.gift-box{grid-template-columns:1fr}.gift-art{margin:0 auto}}
+@media (max-width:640px){.gift-box{grid-template-columns:1fr}.gift-art,.gift-cover{margin:0 auto}}
 
 /* journal */
 .journal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
