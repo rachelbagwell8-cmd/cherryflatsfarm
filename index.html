@@ -365,10 +365,10 @@ const PREORDERS_ENABLED = false;  // preorders only with Rachel's approval
 const FARM_STAND = [
   { name:"Love Skin Salve", img:"skin-butter-jars.jpg", alt:"Small glass jars of Love Skin Salve with black lids",
     desc:"Years in the making. Emu oil carries golden helichrysum, the everlasting flower, into dry, tired skin, with calendula, jojoba and argan. Lovely on fine lines, hands and elbows. Sweet orange and frankincense scent. 1 oz jar.",
-    status:"available", price:"$14", quantity:20, delivery:["ship","pickup"], link:null },
+    status:"available", price:"$14", quantity:20, delivery:["ship","pickup"], link:"https://square.link/u/uocZfoyv" },
   { name:"The Thicket Hair & Scalp Treatment", img:null, placeholder:"2 oz glass jar, black lid",
     desc:"Happy scalp, happy hair. Home-grown rosemary slow-infused in coconut oil, with castor oil for a thirsty scalp, plus cedarwood and peppermint. A buttery pre-wash treatment for dry, brittle hair. 2 oz jar.",
-    status:"available", price:"$24", quantity:3, delivery:["ship","pickup"], link:null },
+    status:"available", price:"$24", quantity:3, note:"Only 3 jars left from this batch. The next batch of rosemary is infusing now.", delivery:["ship","pickup"], link:null },
   { name:"Simmer Pots", img:"simmer-pots.jpg", alt:"Simmer pot bags of dried oranges and spices tied with red buffalo-check bows in a woven basket",
     desc:"Harvest Home, Christmas at the Farmhouse and Sunday at Home. Dried fruit, herbs and spices: drop one in a pot of water and the whole house smells wonderful.",
     status:"coming-soon", price:"$10 · 3 for $25", quantity:null, delivery:["ship","pickup"], link:null },
@@ -385,7 +385,7 @@ function renderStand(){
     const photo = p.img ? `<div class="photo dark"><img src="${esc(p.img)}" alt="${esc(p.alt||"")}" loading="lazy"></div>`
                         : `<div class="photo dark"><span>${esc(p.placeholder||p.name)}</span></div>`;
     const price = (p.status==="available" && p.price) ? `<span class="price">${esc(p.price)}</span>` : `<span class="price-soon">Price coming soon</span>`;
-    const qty = (p.status==="available" && p.quantity) ? `<p class="batch-size">This batch: ${esc(p.quantity)} made by hand</p>` : "";
+    const qty = (p.status==="available" && p.note) ? `<p class="batch-size">${esc(p.note)}</p>` : (p.status==="available" && p.quantity) ? `<p class="batch-size">${esc(p.quantity)} jars ready from this batch</p>` : "";
     const tags = p.delivery.map(d => DELIVERY[d]).filter(Boolean).map(([t,c]) => `<span class="note-tag ${c}">${t}</span>`).join("");
     let action;
     if (p.status==="available" && CHECKOUT_ENABLED && p.link) action = `<a class="btn buy" href="${esc(p.link)}" target="_blank" rel="noopener">Buy now · ship or pick up</a>`;
