@@ -363,14 +363,17 @@ menu.querySelectorAll("a").forEach(a => a.addEventListener("click", () => {
 const CHECKOUT_ENABLED = false;   // stays false until inventory, pricing, shipping and payments are ready
 const PREORDERS_ENABLED = false;  // preorders only with Rachel's approval
 const FARM_STAND = [
-  { name:"Skin Salve", img:"skin-butter-jars.jpg", alt:"Small glass jars with black lids and chalkboard labels on the holiday market table",
-    desc:"Our farm stand bestseller for working hands.", status:"coming-soon", price:null, quantity:null, delivery:["ship","pickup"] },
-  { name:"Rosemary Hair Treatment", img:null, placeholder:"2 oz glass jar, black lid",
-    desc:"A buttery balm with rosemary from our own herb beds.", status:"coming-soon", price:null, quantity:null, delivery:["ship","pickup"] },
+  { name:"Love Skin Salve", img:"skin-butter-jars.jpg", alt:"Small glass jars of Love Skin Salve with black lids",
+    desc:"Years in the making. Emu oil carries golden helichrysum, the everlasting flower, into dry, tired skin, with calendula, jojoba and argan. Lovely on fine lines, hands and elbows. Sweet orange and frankincense scent. 1 oz jar.",
+    status:"available", price:"$14", quantity:20, delivery:["ship","pickup"], link:null },
+  { name:"The Thicket Hair & Scalp Treatment", img:null, placeholder:"2 oz glass jar, black lid",
+    desc:"Happy scalp, happy hair. Home-grown rosemary slow-infused in coconut oil, with castor oil for a thirsty scalp, plus cedarwood and peppermint. A buttery pre-wash treatment for dry, brittle hair. 2 oz jar.",
+    status:"available", price:"$24", quantity:3, delivery:["ship","pickup"], link:null },
+  { name:"Simmer Pots", img:"simmer-pots.jpg", alt:"Simmer pot bags of dried oranges and spices tied with red buffalo-check bows in a woven basket",
+    desc:"Harvest Home, Christmas at the Farmhouse and Sunday at Home. Dried fruit, herbs and spices: drop one in a pot of water and the whole house smells wonderful.",
+    status:"coming-soon", price:"$10 · 3 for $25", quantity:null, delivery:["ship","pickup"], link:null },
   { name:"Dry Sourdough Starter", img:null, placeholder:"Dry starter in kraft envelope",
-    desc:"Our starter, dried for the mail. Wake-up guide included.", status:"coming-soon", price:null, quantity:null, delivery:["ship","pickup"] },
-  { name:"Farmhouse Simmer Pot", img:"simmer-pots.jpg", alt:"Simmer pot bags of dried oranges and spices tied with red buffalo-check bows in a woven basket",
-    desc:"Dried citrus and warm spices. Drop it in a pot of water and the whole house smells like the holidays.", status:"coming-soon", price:null, quantity:null, delivery:["ship","pickup"] },
+    desc:"Our starter, dried for the mail. Wake-up guide included.", status:"coming-soon", price:null, quantity:null, delivery:["ship","pickup"], link:null },
 ];
 const STATUS = { "available":["Available","s-avail"], "sold-out":["Sold out","s-out"], "coming-soon":["Coming soon","s-soon"] };
 const DELIVERY = { ship:["Ships in the U.S.","d-ship"], pickup:["Local pickup","d-pick"], digital:["Digital delivery","d-digital"] };
@@ -385,7 +388,7 @@ function renderStand(){
     const qty = (p.status==="available" && p.quantity) ? `<p class="batch-size">This batch: ${esc(p.quantity)} made by hand</p>` : "";
     const tags = p.delivery.map(d => DELIVERY[d]).filter(Boolean).map(([t,c]) => `<span class="note-tag ${c}">${t}</span>`).join("");
     let action;
-    if (p.status==="available" && CHECKOUT_ENABLED) action = `<a class="btn buy" href="#stand" data-dest="cherry-flats-checkout-tbd">Add to basket</a>`;
+    if (p.status==="available" && CHECKOUT_ENABLED && p.link) action = `<a class="btn buy" href="${esc(p.link)}" target="_blank" rel="noopener">Buy now · ship or pick up</a>`;
     else if (p.status==="available") action = `<span class="btn buy is-off" aria-disabled="true" data-dest="cherry-flats-checkout-tbd">Ordering opens soon</span>`;
     else action = `<a class="btn restock" href="#gift" data-dest="email-list-restock">Tell me when it's ready</a>`;
     return `<div class="item" data-status="${esc(p.status)}">${photo}
