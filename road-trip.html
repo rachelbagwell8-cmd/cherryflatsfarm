@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Road Trip Adventure Book · Printable Activity Book for Kids 6–12 · Cherry Flats Farm</title>
+<meta name="description" content="64 pages of screen-free road trip games, mazes, crosswords, silly stories and coloring for kids 6–12, starring the real animals of Cherry Flats Farm. Instant download, print at home.">
+<link rel="icon" type="image/png" href="favicon.png">
+<meta property="og:title" content="Cherry Flats Farm's Road Trip Adventure Book">
+<meta property="og:description" content="Turn &quot;Are we there yet?&quot; into &quot;Can we keep going?&quot; 64 printable pages of road games, puzzles and coloring for kids 6–12.">
+<meta property="og:image" content="https://cherryflatsfarm.com/road-trip/cover.jpg">
+<meta property="og:type" content="product">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Lora:ital,wght@0,500;0,600;0,700;1,500&family=Libre+Franklin:wght@400;500;600&family=Caveat:wght@500;700&display=swap">
+<style>
+/* Layout: a road trip in five stops. The cover and buy button up front, why parents love it, a peek inside, the real crew, then a last chance to grab it before the car pulls out. */
+:root{
+  --cherry:#8B2A2A; --cherry-deep:#6E1F1F;
+  --flour:#F6F0E4; --linen:#EDE3D1; --kraft:#C8A27A;
+  --chalk-bg:#2B2B28; --chalk:#ECE7DA;
+  --pine:#4A5D43; --citrus:#D98A3A;
+  --ink:#2E2620; --ink-soft:#5E5248;
+  --f-chalk:"Fredericka the Great","Rockwell",Georgia,serif;
+  --f-head:"Lora",Georgia,"Times New Roman",serif;
+  --f-body:"Libre Franklin",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-hand:"Caveat","Bradley Hand","Segoe Print",cursive;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--flour);color:var(--ink);font-family:var(--f-body);font-size:1.0625rem;line-height:1.6}
+img{max-width:100%;display:block}
+main{overflow-x:clip}
+h1,h2,h3{font-family:var(--f-head);text-wrap:balance;margin:0;line-height:1.15;color:var(--ink)}
+p{margin:0}
+a{color:var(--cherry)}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--citrus);outline-offset:3px}
+.wrap{max-width:1140px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.band{padding-block:clamp(56px,8vw,96px)}
+.eyebrow{font-family:var(--f-chalk);color:var(--cherry);font-size:1.15rem;letter-spacing:.04em;margin-bottom:10px}
+.lede{color:var(--ink-soft);max-width:58ch}
+.hand{font-family:var(--f-hand);font-size:1.45rem;line-height:1.2;color:var(--cherry)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--f-body);font-weight:600;font-size:1.05rem;padding:15px 26px;border-radius:4px;text-decoration:none;border:2px solid var(--cherry);cursor:pointer;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn-red{background:var(--cherry);color:var(--flour)}
+.btn-red:hover{background:var(--cherry-deep);border-color:var(--cherry-deep)}
+.btn-line{background:transparent;color:var(--cherry)}
+
+/* header */
+header{background:var(--flour);border-bottom:1px solid var(--linen);position:sticky;top:0;z-index:20}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:10px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
+.logo img{width:40px;height:40px}
+.logo-word{font-family:var(--f-chalk);font-size:1.4rem;line-height:1;color:var(--cherry)}
+.nav-right{display:flex;align-items:center;gap:18px}
+.back{font-weight:600;font-size:.95rem;text-decoration:none}
+.nav .btn{padding:9px 16px;font-size:.95rem}
+@media (max-width:560px){.back{display:none}.logo-word{font-size:1.15rem}}
+
+/* hero */
+.hero{padding-block:clamp(36px,6vw,72px) clamp(48px,7vw,88px)}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,5vw,64px);align-items:center}
+.hero h1{font-size:clamp(2.1rem,4.6vw,3.4rem);margin-bottom:18px}
+.hero h1 em{font-style:italic;color:var(--cherry)}
+.hero .lede{font-size:1.15rem;margin-bottom:26px}
+.buy-row{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.price{font-family:var(--f-head);font-weight:700;font-size:1.9rem;color:var(--ink)}
+.price small{display:block;font-family:var(--f-body);font-weight:500;font-size:.8rem;color:var(--ink-soft);letter-spacing:.02em}
+.facts{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:22px;padding:0;list-style:none;font-size:.92rem;color:var(--ink-soft)}
+.facts li::before{content:"✓ ";color:var(--pine);font-weight:700}
+.paperback-note{margin-top:14px;font-size:.92rem;color:var(--ink-soft)}
+.cover-stage{position:relative;justify-self:center;max-width:430px;width:100%}
+.cover-stage::before{content:"";position:absolute;inset:6% -6% -4% 10%;background:var(--linen);border-radius:8px;transform:rotate(4deg)}
+.cover-stage img{position:relative;width:100%;height:auto;border-radius:3px 8px 8px 3px;box-shadow:inset 10px 0 0 rgba(0,0,0,.18),10px 14px 30px rgba(46,38,32,.32)}
+.sticker{position:absolute;z-index:2;left:-18px;bottom:22%;background:var(--cherry);color:var(--flour);font-family:var(--f-hand);font-size:1.35rem;line-height:1.05;padding:10px 14px;border-radius:50%;width:104px;height:104px;display:grid;place-items:center;text-align:center;transform:rotate(-10deg);box-shadow:0 6px 14px rgba(46,38,32,.3)}
+@media (max-width:820px){.hero-grid{grid-template-columns:1fr}.cover-stage{order:-1;max-width:250px}.sticker{left:-10px;bottom:2%;width:80px;height:80px;font-size:1.05rem}}
+
+/* benefits */
+.benefits{background:var(--linen)}
+.ben-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:34px}
+.ben{background:var(--flour);border-radius:6px;padding:24px 22px;border-top:4px solid var(--cherry)}
+.ben:nth-child(2){border-top-color:var(--pine)}
+.ben:nth-child(3){border-top-color:var(--citrus)}
+.ben:nth-child(4){border-top-color:var(--kraft)}
+.ben h3{font-size:1.2rem;margin-bottom:8px}
+.ben p{font-size:.95rem;color:var(--ink-soft)}
+@media (max-width:900px){.ben-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.ben-grid{grid-template-columns:1fr}}
+
+/* peek inside */
+.peek-head{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap}
+.peek{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:34px}
+.page{margin:0;display:flex;flex-direction:column;gap:10px}
+.page button{all:unset;cursor:zoom-in;display:block;background:#fff;padding:8px;border-radius:3px;box-shadow:0 2px 0 var(--linen),4px 8px 18px rgba(46,38,32,.16);transition:transform .2s}
+.page button:hover{transform:translateY(-3px) rotate(-.6deg)}
+.page:nth-child(even) button:hover{transform:translateY(-3px) rotate(.6deg)}
+.page img{width:100%;height:auto}
+.page figcaption{font-family:var(--f-hand);font-size:1.3rem;line-height:1.1;color:var(--ink)}
+@media (max-width:900px){.peek{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:600px){.peek{grid-template-columns:1fr 1fr;gap:16px}}
+dialog{border:none;padding:0;background:transparent;max-width:min(92vw,720px)}
+dialog::backdrop{background:rgba(30,24,20,.82)}
+dialog img{max-height:86vh;width:auto;background:#fff;padding:10px;border-radius:4px}
+dialog .close{position:absolute;top:-6px;right:-6px;background:var(--cherry);color:var(--flour);border:none;border-radius:50%;width:40px;height:40px;font-size:1.3rem;cursor:pointer}
+
+/* inside list */
+.inside{background:var(--chalk-bg);color:var(--chalk)}
+.inside h2{color:var(--chalk);font-family:var(--f-chalk);font-weight:400;font-size:clamp(1.9rem,3.6vw,2.6rem)}
+.inside .eyebrow{color:var(--kraft)}
+.inside-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px 34px;margin-top:34px}
+.chunk h3{color:var(--chalk);font-family:var(--f-hand);font-weight:700;font-size:1.7rem;margin-bottom:6px}
+.chunk p{color:#C9C4B8;font-size:.95rem}
+@media (max-width:820px){.inside-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.inside-grid{grid-template-columns:1fr}}
+
+/* crew + author */
+.crew-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,64px);align-items:center}
+.crew-list{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0 0;padding:0;list-style:none}
+.crew-list li{background:var(--linen);border-radius:999px;padding:7px 14px;font-size:.92rem}
+.crew-list b{color:var(--cherry)}
+.author{display:grid;grid-template-columns:150px 1fr;gap:22px;align-items:center;background:#fff;border-radius:8px;padding:22px;box-shadow:4px 8px 22px rgba(46,38,32,.1)}
+.author img{width:150px;height:150px;object-fit:cover;border-radius:50%}
+.author p{font-size:.98rem;color:var(--ink-soft)}
+.author .sig{font-family:var(--f-hand);font-size:1.6rem;color:var(--cherry);margin-top:8px}
+@media (max-width:820px){.crew-grid{grid-template-columns:1fr}}
+@media (max-width:480px){.author{grid-template-columns:1fr;text-align:center}.author img{margin:0 auto}}
+
+/* faq */
+.faq>*{max-width:760px}
+details{border-bottom:1px solid var(--linen);padding:16px 0}
+summary{cursor:pointer;font-family:var(--f-head);font-weight:600;font-size:1.12rem;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--cherry);font-size:1.4rem;line-height:1}
+details[open] summary::after{content:"–"}
+details p{margin-top:10px;color:var(--ink-soft)}
+
+/* final call */
+.last{background:var(--cherry);color:var(--flour);text-align:center}
+.last h2{color:var(--flour);font-size:clamp(1.9rem,4vw,2.8rem);margin-bottom:12px}
+.last p{color:#F1DCD4;max-width:52ch;margin:0 auto 26px}
+.last .btn{background:var(--flour);color:var(--cherry);border-color:var(--flour)}
+.last .btn:hover{background:#fff}
+.last small{display:block;margin-top:14px;color:#F1DCD4;font-size:.88rem}
+
+footer{padding-block:34px;font-size:.88rem;color:var(--ink-soft)}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="/" aria-label="Cherry Flats Farm home">
+      <img src="logo-icon.png" alt="" width="40" height="40">
+      <span class="logo-word">Cherry Flats Farm</span>
+    </a>
+    <div class="nav-right">
+      <a class="back" href="/#shelf">← Back to the farm</a>
+      <a class="btn btn-red" href="https://bagwellrachel.gumroad.com/l/fihkkb" data-buy>Get it · $9.99</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">New from the farm · Printable PDF</p>
+        <h1>Turn "Are we there yet?" into <em>"Can we keep going?"</em></h1>
+        <p class="lede">Cherry Flats Farm's Road Trip Adventure Book is 64 pages of road games, mazes, crosswords, silly stories and coloring pages for kids 6 to 12, starring the real animals from our farm. Download it tonight, print what you need, and hit the road.</p>
+        <div class="buy-row">
+          <a class="btn btn-red" href="https://bagwellrachel.gumroad.com/l/fihkkb" data-buy>Get the printable book</a>
+          <p class="price">$9.99<small>Instant download</small></p>
+        </div>
+        <ul class="facts">
+          <li>64 activity pages + color cover</li>
+          <li>Ages 6–12</li>
+          <li>US Letter, any home printer</li>
+          <li>Answer keys included</li>
+        </ul>
+        <p class="paperback-note">Prefer a printed book? The paperback is coming soon to Amazon.</p>
+      </div>
+      <div class="cover-stage">
+        <span class="sticker" aria-hidden="true">64 pages of fun!</span>
+        <img src="road-trip/cover.jpg" alt="Cover of Cherry Flats Farm's Road Trip Adventure Book: a red farm truck carrying two dogs down a winding country road" width="620" height="802">
+      </div>
+    </div>
+  </section>
+
+  <section class="band benefits" aria-labelledby="why-h">
+    <div class="wrap">
+      <p class="eyebrow">Why families pack it</p>
+      <h2 id="why-h">More miles, fewer meltdowns</h2>
+      <div class="ben-grid">
+        <div class="ben"><h3>Screen-free hours</h3><p>Bingo, scavenger hunts and look-out-the-window games keep eyes on the road trip, not the tablet.</p></div>
+        <div class="ben"><h3>Fun for the whole car</h3><p>Silly stories, tic-tac-toe and Would You Rather? are made to play together, so grown-ups get in on it too.</p></div>
+        <div class="ben"><h3>Right for every age</h3><p>Easy coloring and picture puzzles for little ones, plus a tougher Brain-Buster crossword for big kids.</p></div>
+        <div class="ben"><h3>Print it again and again</h3><p>Print only the pages you need, one set per kid, and reprint for every family trip.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="peek-h">
+    <div class="wrap">
+      <div class="peek-head">
+        <div>
+          <p class="eyebrow">Take a peek inside</p>
+          <h2 id="peek-h">A few pages from the book</h2>
+        </div>
+        <p class="hand">Tap a page to look closer →</p>
+      </div>
+      <div class="peek">
+        <figure class="page"><button type="button" data-zoom="road-trip/page-05.jpg" aria-label="Enlarge: Meet the Cherry Flats Crew"><img src="road-trip/page-05.jpg" alt="Meet the Cherry Flats Crew page with the farm animals" loading="lazy" width="640" height="853"></button><figcaption>Meet the crew</figcaption></figure>
+        <figure class="page"><button type="button" data-zoom="road-trip/page-13.jpg" aria-label="Enlarge: Road Trip Bingo"><img src="road-trip/page-13.jpg" alt="Road Trip Bingo card with pictures to spot out the window" loading="lazy" width="640" height="853"></button><figcaption>Road trip bingo</figcaption></figure>
+        <figure class="page"><button type="button" data-zoom="road-trip/page-18.jpg" aria-label="Enlarge: Road Trip Hidden Things Challenge"><img src="road-trip/page-18.jpg" alt="Hidden things picture challenge of a mountain road scene" loading="lazy" width="640" height="853"></button><figcaption>Hidden things challenge</figcaption></figure>
+        <figure class="page"><button type="button" data-zoom="road-trip/page-29.jpg" aria-label="Enlarge: Farm Stand Shopping Challenge"><img src="road-trip/page-29.jpg" alt="Farm Stand Shopping Challenge math page" loading="lazy" width="640" height="853"></button><figcaption>Farm stand math</figcaption></figure>
+        <figure class="page"><button type="button" data-zoom="road-trip/page-37.jpg" aria-label="Enlarge: The Great Pig Escape silly story"><img src="road-trip/page-37.jpg" alt="The Great Pig Escape fill-in silly story page" loading="lazy" width="640" height="853"></button><figcaption>Silly stories</figcaption></figure>
+        <figure class="page"><button type="button" data-zoom="road-trip/page-39.jpg" aria-label="Enlarge: The Great Pig Escape coloring page"><img src="road-trip/page-39.jpg" alt="Coloring page of pigs running through the farm" loading="lazy" width="640" height="853"></button><figcaption>Coloring pages</figcaption></figure>
+        <figure class="page"><button type="button" data-zoom="road-trip/page-48.jpg" aria-label="Enlarge: Drive Through the Corn Maze"><img src="road-trip/page-48.jpg" alt="Drive Through the Corn Maze puzzle page" loading="lazy" width="640" height="853"></button><figcaption>Mazes</figcaption></figure>
+        <figure class="page"><button type="button" data-zoom="road-trip/page-63.jpg" aria-label="Enlarge: Road Trip Champion certificate"><img src="road-trip/page-63.jpg" alt="Road Trip Champion certificate" loading="lazy" width="640" height="853"></button><figcaption>A champion certificate</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="band inside" aria-labelledby="inside-h">
+    <div class="wrap">
+      <p class="eyebrow">What's in the glovebox</p>
+      <h2 id="inside-h">Everything inside the 64 pages</h2>
+      <div class="inside-grid">
+        <div class="chunk"><h3>Road games</h3><p>Two bingo cards, the license plate game, picture and roadside scavenger hunts, and a rest-stop nature hunt.</p></div>
+        <div class="chunk"><h3>Puzzles &amp; brain teasers</h3><p>Three crosswords, two word searches, mazes, dot-to-dots, spot the difference and animal riddles.</p></div>
+        <div class="chunk"><h3>Silly stories</h3><p>Fill-in-the-blank farm tales like The Great Pig Escape and The Sheep Express, with a coloring page for each.</p></div>
+        <div class="chunk"><h3>Kindness &amp; car games</h3><p>Kind Words Round, Good Neighbor Games, Would You Rather? and a tic-tac-toe tournament.</p></div>
+        <div class="chunk"><h3>Draw &amp; remember</h3><p>Design your own farm truck and farm stand, a road trip map, journal pages and a postcard to the farm.</p></div>
+        <div class="chunk"><h3>Find Quackers!</h3><p>Our duck is hiding on 12 pages. Plus answer keys and a family scorecard to crown the Road Trip Champion.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="crew-h">
+    <div class="wrap crew-grid">
+      <div>
+        <p class="eyebrow">Real farm, real animals</p>
+        <h2 id="crew-h">Starring the Cherry Flats crew</h2>
+        <p class="lede" style="margin-top:14px">Every animal in this book lives with us on Horse Creek, at the edge of the Klamath River. Kids get to know them page by page, and come away loving the farm as much as we do.</p>
+        <ul class="crew-list">
+          <li><b>Jack</b> the dog</li>
+          <li><b>Lightning</b> the sheep</li>
+          <li><b>Quackers</b> the duck</li>
+          <li><b>Sweety</b> the cow</li>
+          <li><b>Pickles</b> the pig</li>
+          <li><b>Sassy</b> the horse</li>
+        </ul>
+      </div>
+      <div class="author">
+        <img src="rachel-kitchen.jpg" alt="Rachel in her farmhouse kitchen" loading="lazy">
+        <div>
+          <p>I'm Rachel, a homeschooling mom of five. Countless miles of family road trips taught me what keeps a backseat crew happy, and I put all of it in this book. I hope it makes your next drive one your kids talk about for years.</p>
+          <p class="sig">Rachel</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" style="padding-top:0" aria-labelledby="faq-h">
+    <div class="wrap faq">
+      <p class="eyebrow">Good questions</p>
+      <h2 id="faq-h" style="margin-bottom:12px">Before you buy</h2>
+      <details><summary>How do I get the book?</summary><p>Right after checkout you'll get a download link on screen and by email. The PDF is yours to keep and download again anytime.</p></details>
+      <details><summary>Can I print it more than once?</summary><p>Yes. Print a set for each of your kids and reprint it for every family trip. It's for your own household's use, so please don't share or resell the file.</p></details>
+      <details><summary>What do I need to print it?</summary><p>Any home printer and regular 8.5 × 11 in paper. The pages are black and white to save ink; the cover is in color.</p></details>
+      <details><summary>Is it right for my child's age?</summary><p>It's made for ages 6 to 12. Younger kids love the coloring, bingo and picture games; older kids dig into the crosswords, word searches and silly stories.</p></details>
+      <details><summary>Is there a printed version?</summary><p>The paperback is coming soon to Amazon. It's the perfect gift and ready to toss in the car.</p></details>
+    </div>
+  </section>
+
+  <section class="band last" aria-labelledby="last-h">
+    <div class="wrap">
+      <h2 id="last-h">Your next road trip starts here</h2>
+      <p>64 pages of screen-free fun, ready to print tonight. Pack the crayons, buckle up, and let the Cherry Flats crew ride along.</p>
+      <a class="btn" href="https://bagwellrachel.gumroad.com/l/fihkkb" data-buy>Get the printable book · $9.99</a>
+      <small>Instant download · Secure checkout through Gumroad</small>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Rachel Bagwell · Cherry Flats Farm</span>
+    <a href="/">cherryflatsfarm.com</a>
+  </div>
+</footer>
+
+<dialog id="zoom" aria-label="Enlarged sample page">
+  <button class="close" type="button" aria-label="Close">×</button>
+  <img src="" alt="">
+</dialog>
+
+<script>
+// Sample page zoom
+const dlg = document.getElementById("zoom");
+const big = dlg.querySelector("img");
+document.querySelectorAll("[data-zoom]").forEach(b => b.addEventListener("click", () => {
+  big.src = b.dataset.zoom; big.alt = b.querySelector("img").alt;
+  if (dlg.showModal) dlg.showModal(); else window.open(b.dataset.zoom, "_blank");
+}));
+dlg.querySelector(".close").addEventListener("click", () => dlg.close());
+dlg.addEventListener("click", e => { if (e.target === dlg) dlg.close(); });
+
+// Keep a Gumroad affiliate code (?a= or ?affiliate_id=) on the buy links so referrals are credited.
+const qs = new URLSearchParams(location.search);
+const aff = qs.get("a") || qs.get("affiliate_id");
+if (aff) document.querySelectorAll("[data-buy]").forEach(l => {
+  const u = new URL(l.href); u.searchParams.set("a", aff); l.href = u.toString();
+});
+</script>
+<!-- Gumroad overlay checkout: buy links open checkout on this page instead of leaving the site. -->
+<script src="https://gumroad.com/js/gumroad.js"></script>
+</body>
+</html>
